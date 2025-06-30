@@ -44,6 +44,8 @@ function closeMenu() {
   hamburgerLine1.classList.remove('rotate-45', 'translate-y-2');
   hamburgerLine2.classList.remove('opacity-0');
   hamburgerLine3.classList.remove('-rotate-45', '-translate-y-2');
+
+
   
   // Backdrop ausblenden
   mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
@@ -106,3 +108,24 @@ document.addEventListener("DOMContentLoaded", function () {
   type();
 });
 
+// Angepasstes Scrollverhalten für mobile Links
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // standardmäßiges Springen verhindern
+
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+
+    // Menü schließen (vorher)
+    closeMenu();
+
+    // Nach kurzer Wartezeit scrollen (damit Menüanimation durch ist)
+    setTimeout(() => {
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const extraOffset = -65; // Feinjustierung – du kannst 0 oder 30 testen
+      const position = target.getBoundingClientRect().top + window.scrollY - headerHeight - extraOffset;
+
+      window.scrollTo({ top: position, behavior: 'smooth' });
+    }, 200); // sollte zur Dauer deiner Menü-Animation passen
+  });
+});
