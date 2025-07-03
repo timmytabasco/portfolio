@@ -45,7 +45,6 @@ function closeMenu() {
   hamburgerLine2.classList.remove('opacity-0');
   hamburgerLine3.classList.remove('-rotate-45', '-translate-y-2');
 
-
   
   // Backdrop ausblenden
   mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
@@ -129,3 +128,12 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     }, 200); // sollte zur Dauer deiner Menü-Animation passen
   });
 });
+
+//Schließen des Menüs bei Klick auf Logo
+document.querySelector('.logo').addEventListener('click', () =>{
+  
+  if(isMenuOpen){
+    closeMenu();
+  }
+
+})
