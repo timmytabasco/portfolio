@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="de" class="scroll-smooth">
     <head>
     <meta charset="UTF-8" />
@@ -15,39 +15,197 @@
 
   <header class="bg-neutral-900 w-full sticky top-0 z-50 shadow-lg">
     <nav>
-      <div class="container mx-auto px-4 py-4 flex justify-center gap-x-12">
-        <a id="back-link" href="index.html" class="text-yellow-50 text-lg flex items-center group">
+      <div class="container mx-auto px-4 py-4 flex justify-between">
+        <a id="back-link" href="index.html" class="text-yellow-50 text-lg flex group">
           <i class="fas fa-arrow-left mr-4 group-hover:-translate-x-1 transition-transform duration-500"></i>
-          <span>ZUR STARTSEITE</span>
+          <span class="underline underline-offset-8">ZUR STARTSEITE</span>
         </a>
-        <span class="underline underline-offset-8 text-yellow-50 text-2xl font-semibold tracking-wide">LEBENSLAUF</span>
       </div>
     </nav>
   </header>
   
-  <div class="grid grid-cols-1 md:grid-cols-3 min-h-screen">
-
-    <aside class="bg-yellow-100 p-6 md:col-span-1 sticky top-24 h-[500px] w-full max-w-sm mx-auto rounded-2xl shadow-lg text-sm leading-relaxed">
-    <img src="/assets/tim.jpg" alt="Profilbild" class="rounded-full w-24 h-24 mx-auto my-10 shadow-md">
+  <div class="relative w-full h-[calc(100vh-6rem)] md:grid md:grid-cols-3 md:h-[calc(100vh-6rem)] md:p-6 md:gap-6 overflow-hidden duration-500">
+  
+  <!-- Slide 1: Persönliche Infos -->
+  <aside id="slide-info" class="absolute inset-0 bg-yellow-100 p-6 flex flex-col items-center justify-center transition-transform duration-500 md:static md:col-span-1 md:h-[500px] md:rounded-2xl md:shadow-lg">
+    <img src="/img/me.jpg" alt="Profilbild" class="rounded-full w-28 h-28 shadow-md mb-16">
     <h2 class="text-xl font-bold text-center">Tim Petersdorff</h2>
     <p class="text-center text-gray-600 mb-4">Angehender Fachinformatiker</p>
-
-    <ul class="text-center space-y-1 text-gray-700 text-sm">
-        <li>An den Gärtnerhöfen 7</li>
-        <li>38120 Braunschweig</li>
-        <li>Telefon: 0176 23921074</li>
-        <li>E-Mail: tim.petersdorff@icloud.com</li>
+    <ul class="text-center text-gray-700 text-sm space-y-1">
+      <li>An den Gärtnerhöfen 7</li>
+      <li>38120 Braunschweig</li>
+      <li>Telefon: 0176 23921074</li>
+      <li>E-Mail: tim.petersdorff@icloud.com</li>
     </ul>
-
-    <hr class="my-3 border-gray-300" />
-
-    <div class="text-xs text-gray-500 text-center leading-snug mt-6">
-        Geboren am 27.03.1995<br />
-        Nationalität: Deutsch<br />
-        Familienstand: Ledig
+    <hr class="my-3 border-gray-300 w-full max-w-xs" />
+    <div class="text-xs text-gray-500 text-center leading-snug">
+      Geboren am 27.03.1995<br />
+      Nationalität: Deutsch<br />
+      Familienstand: Ledig
     </div>
-    </aside>
+
+    <!-- Slide Button -->
+    <button id="btn-to-resume" class="mt-16 bg-neutral-800 text-yellow-50 px-4 py-2 rounded-lg shadow hover:bg-neutral-700 transition md:hidden">
+      Zum Lebenslauf
+    </button>
+  </aside>
+
+  <!-- Slide 2: Lebenslauf -->
+  <main id="slide-resume" class="absolute inset-0 bg-yellow-50 p-6 overflow-y-auto transition-transform duration-500 translate-x-full md:static md:col-span-2 md:translate-x-0 md:bg-white md:rounded-2xl md:shadow-lg md:overflow-y-auto">
+    <article class="max-w-4xl">
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">Lebenslauf</h1>
+      </header>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4 border-b-2 border-yellow-200 pb-2">Zur Person</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Engagierter und lernbereiter angehender Fachinformatiker mit umfassender praktischer Erfahrung in der Logistik. 
+          Aktuell in einer Umschulung zum Fachinformatiker für Anwendungsentwicklung, um meine Leidenschaft für Technologie 
+          und Problemlösung beruflich zu verwirklichen. Ich bringe eine hohe Stressresistenz, eine schnelle Auffassungsgabe 
+          und eine proaktive, selbstständige Arbeitsweise mit.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4 border-b-2 border-yellow-200 pb-2">Beruflicher Werdegang</h2>
+        
+        <div class="space-y-6">
+          <div class="border-l-4 border-yellow-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Berufliche Neuorientierung</h3>
+              <time class="text-sm text-gray-600" datetime="2023-01/2024-01">01/2023 – 01/2024</time>
+            </header>
+            <ul class="text-gray-700 space-y-1 list-disc list-inside">
+              <li>Bewusste Entscheidung für einen Karrierewechsel in die IT-Branche</li>
+              <li>Intensives Selbststudium in den Grundlagen der Webentwicklung (HTML, CSS) und Serveradministration (Linux VPS)</li>
+              <li>Aktive Suche und Vorbereitung auf die Umschulung zum Fachinformatiker</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-yellow-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Mitarbeiter in der Logistik</h3>
+              <p class="text-sm text-gray-600 font-medium">House of Sweets Online Shop GmbH, Braunschweig</p>
+              <time class="text-sm text-gray-600" datetime="2021-03/2022-12">03/2021 – 12/2022</time>
+            </header>
+            <ul class="text-gray-700 space-y-1 list-disc list-inside">
+              <li>Planung und Sicherstellung reibungsloser logistischer Abläufe</li>
+              <li>Übernahme der Abteilungsverantwortung für einen zugewiesenen Bereich</li>
+              <li>Durchführung der wöchentlichen Warenbelieferung der firmeneigenen Filialen (Fahrzeugklasse: 3,5t)</li>
+            </ul>
+          </div>
+
+          <div class="border-l-4 border-yellow-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Mitarbeiter in der Logistik</h3>
+              <p class="text-sm text-gray-600 font-medium">DHL Home Delivery GmbH, Braunschweig</p>
+              <time class="text-sm text-gray-600" datetime="2013-10/2021-02">10/2013 – 02/2021</time>
+            </header>
+            <ul class="text-gray-700 space-y-1 list-disc list-inside">
+              <li>Effiziente Kommissionierung von Gütern nach Auftragsvorgabe</li>
+              <li>Sicherstellung des innerbetrieblichen Transports von Waren</li>
+              <li>Verantwortung für die Warenannahme und den Warenausgang</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4 border-b-2 border-yellow-200 pb-2">Bildungsweg</h2>
+        
+        <div class="space-y-6">
+          <div class="border-l-4 border-blue-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Umschulung zum Fachinformatiker – Anwendungsentwicklung</h3>
+              <p class="text-sm text-gray-600 font-medium">Lehrwerk GmbH, Braunschweig</p>
+              <time class="text-sm text-gray-600" datetime="2024-02">Seit 02/2024</time>
+            </header>
+            <p class="text-gray-700 text-sm italic">Schwerpunkte werden nach Abschluss ergänzt</p>
+          </div>
+
+          <div class="border-l-4 border-blue-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Erweiterter Sekundarabschluss I</h3>
+              <p class="text-sm text-gray-600 font-medium">Realschule Maschstraße, Braunschweig</p>
+              <time class="text-sm text-gray-600" datetime="2011-08/2012-06">08/2011 – 06/2012</time>
+            </header>
+            <p class="text-gray-700">Abschlussnote: 2,4</p>
+          </div>
+
+          <div class="border-l-4 border-blue-300 pl-4">
+            <header class="mb-2">
+              <h3 class="text-lg font-semibold text-gray-900">Sekundarstufe I</h3>
+              <p class="text-sm text-gray-600 font-medium">Kranichgymnasium, Salzgitter-Lebenstedt</p>
+              <time class="text-sm text-gray-600" datetime="2005-08/2011-07">08/2005 – 07/2011</time>
+            </header>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4 border-b-2 border-yellow-200 pb-2">Kenntnisse & Fähigkeiten</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900 mb-3">IT-Kompetenzen</h3>
+            <div class="space-y-2">
+              <div>
+                <span class="font-medium text-gray-800">Webentwicklung:</span>
+                <span class="text-gray-700"> HTML5, CSS3, Tailwind CSS</span>
+              </div>
+              <div>
+                <span class="font-medium text-gray-800">Datenbanken:</span>
+                <span class="text-gray-700"> SQL (Grundlagen)</span>
+              </div>
+              <div>
+                <span class="font-medium text-gray-800">Betriebssysteme:</span>
+                <span class="text-gray-700"> Linux (VPS-Administration), Windows</span>
+              </div>
+              <div>
+                <span class="font-medium text-gray-800">Versionsverwaltung:</span>
+                <span class="text-gray-700"> Git, GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900 mb-3">Persönliche Stärken</h3>
+            <ul class="text-gray-700 space-y-1 list-disc list-inside">
+              <li>Hohe Lernbereitschaft und schnelle Auffassungsgabe</li>
+              <li>Strukturierte und eigeninitiative Arbeitsweise</li>
+              <li>Zuverlässig, teamfähig und stressresistent</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900 mb-3">Sprachkenntnisse</h3>
+            <div class="space-y-1">
+              <div>
+                <span class="font-medium text-gray-800">Deutsch:</span>
+                <span class="text-gray-700"> Muttersprache</span>
+              </div>
+              <div>
+                <span class="font-medium text-gray-800">Englisch:</span>
+                <span class="text-gray-700"> Grundlagen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900 mb-3">Führerschein</h3>
+            <p class="text-gray-700">Fahrerlaubnis der Klasse B</p>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <button id="btn-to-info" class="mt-6 bg-neutral-800 text-yellow-50 px-4 py-2 rounded-lg shadow hover:bg-neutral-700 transition md:hidden">
+      Zurück
+    </button>
+  </main>
 </div>
+
 
 </body>
     </html>

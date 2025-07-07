@@ -200,3 +200,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnToResume = document.getElementById('btn-to-resume');
+  const btnToInfo = document.getElementById('btn-to-info');
+  const slideInfo = document.getElementById('slide-info');
+  const slideResume = document.getElementById('slide-resume');
+
+  btnToResume?.addEventListener('click', () => {
+    slideInfo.classList.add('-translate-x-full');
+    slideResume.classList.remove('translate-x-full');
+    slideResume.classList.add('translate-x-0');
+  });
+
+  btnToInfo?.addEventListener('click', () => {
+    slideInfo.classList.remove('-translate-x-full');
+    slideResume.classList.remove('translate-x-0');
+    slideResume.classList.add('translate-x-full');
+  });
+});
+
