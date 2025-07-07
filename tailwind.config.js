@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
-    "./index.html",           // ← Wichtig: Deine HTML-Dateien!
-    "./*.html"                // ← Falls im Root-Verzeichnis
+    "./index.html",           
+    "./*.html"                
   ],
   theme: {
     extend: {

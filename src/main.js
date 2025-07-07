@@ -1,4 +1,3 @@
-
 // Hamburger Menu Funktionalität 
 const hamburgerBtn = document.querySelector('#hamburger');
 const mobileMenu = document.querySelector('#mobile-menu');
@@ -63,19 +62,25 @@ function closeMenu() {
   document.body.style.overflow = 'auto';
 }
 
-// Event Listeners (bleiben gleich)
-hamburgerBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  isMenuOpen ? closeMenu() : openMenu();
-});
+// Event Listeners für Hamburger Menu
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isMenuOpen ? closeMenu() : openMenu();
+  });
+}
 
-mobileOverlay.addEventListener('click', closeMenu);
+if (mobileOverlay) {
+  mobileOverlay.addEventListener('click', closeMenu);
+}
 
 menuItems.forEach(item => {
   const link = item.querySelector('a');
-  link.addEventListener('click', () => {
-    closeMenu();
-  });
+  if (link) {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  }
 });
 
 document.addEventListener('keydown', (e) => {
@@ -85,26 +90,32 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Touch-Scroll verhindern
-mobileMenu.addEventListener('touchmove', (e) => {
-  if (isMenuOpen) {
-    e.preventDefault();
-  }
-});
+if (mobileMenu) {
+  mobileMenu.addEventListener('touchmove', (e) => {
+    if (isMenuOpen) {
+      e.preventDefault();
+    }
+  });
+}
 
+// Typewriter-Effekt (nur auf Hauptseite)
 document.addEventListener("DOMContentLoaded", function () {
   const target = document.getElementById("typewriter");
-  const text = "Angehender Fachinformatiker für Anwendungsentwicklung! ✨";
-  let index = 0;
+  
+  if (target) {
+    const text = "Angehender Fachinformatiker für Anwendungsentwicklung! ✨";
+    let index = 0;
 
-  function type() {
-    if (index < text.length) {
-      target.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 30); // Tippgeschwindigkeit
+    function type() {
+      if (index < text.length) {
+        target.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 30); // Tippgeschwindigkeit
+      }
     }
-  }
 
-  type();
+    type();
+  }
 });
 
 // Angepasstes Scrollverhalten für mobile Links
@@ -115,25 +126,77 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     const targetId = this.getAttribute('href');
     const target = document.querySelector(targetId);
 
-    // Menü schließen (vorher)
-    closeMenu();
+    if (target) {
+      // Menü schließen (vorher)
+      closeMenu();
 
-    // Nach kurzer Wartezeit scrollen (damit Menüanimation durch ist)
-    setTimeout(() => {
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const extraOffset = -65; // Feinjustierung – du kannst 0 oder 30 testen
-      const position = target.getBoundingClientRect().top + window.scrollY - headerHeight - extraOffset;
+      // Nach kurzer Wartezeit scrollen (damit Menüanimation durch ist)
+      setTimeout(() => {
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const extraOffset = -65; // Feinjustierung – du kannst 0 oder 30 testen
+        const position = target.getBoundingClientRect().top + window.scrollY - headerHeight - extraOffset;
 
-      window.scrollTo({ top: position, behavior: 'smooth' });
-    }, 200); // sollte zur Dauer deiner Menü-Animation passen
+        window.scrollTo({ top: position, behavior: 'smooth' });
+      }, 200); // sollte zur Dauer deiner Menü-Animation passen
+    }
   });
 });
 
-//Schließen des Menüs bei Klick auf Logo
-document.querySelector('.logo').addEventListener('click', () =>{
-  
-  if(isMenuOpen){
-    closeMenu();
+// Schließen des Menüs bei Klick auf Logo
+const logo = document.querySelector('.logo');
+if (logo) {
+  logo.addEventListener('click', () => {
+    if (isMenuOpen) {
+      closeMenu();
+    }
+  });
+}
+
+// PAGE FADE-IN/OUT FUNKTIONALITÄT
+document.addEventListener("DOMContentLoaded", () => {
+  const pageBody = document.getElementById('page-body');
+  const backLink = document.querySelector('#back-link');
+
+  // Fade-In beim Laden der Seite
+  if (pageBody) {
+    setTimeout(() => {
+      pageBody.classList.remove('opacity-0');
+      pageBody.classList.add('opacity-100');
+    }, 200);
   }
 
-})
+  // Fade-Out beim Klick auf Back-Link
+  if (backLink) {
+    backLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Body ausblenden
+      pageBody.classList.remove('opacity-100');
+      pageBody.classList.add('opacity-0');
+
+      // Warte kurz, dann weiterleiten
+      setTimeout(() => {
+        window.location.href = backLink.getAttribute('href');
+      }, 500); // sollte zur Tailwind-Duration passen
+    });
+  }
+
+  // Fade-Out für alle internen Links (optional)
+  document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]').forEach(link => {
+    // Ausnahme: Links mit # (Anker) oder externe Links
+    if (!link.getAttribute('href').includes('#') && !link.hasAttribute('target')) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (pageBody) {
+          pageBody.classList.remove('opacity-100');
+          pageBody.classList.add('opacity-0');
+        }
+
+        setTimeout(() => {
+          window.location.href = link.getAttribute('href');
+        }, 500);
+      });
+    }
+  });
+});
