@@ -220,3 +220,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Öffnen und Schließen des Impressums
+
+const openBtn = document.getElementById('open-impressum');
+const closeBtn = document.getElementById('close-impressum');
+const modal = document.getElementById('impressum-modal');
+
+if (openBtn && closeBtn && modal) {
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Optional: Klick außerhalb schließt das Modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeBtn.click();
+    }
+  });
+
+  // ESC-Taste schließt das Modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
+      closeBtn.click();
+    }
+  });
+}
