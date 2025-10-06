@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const target = document.getElementById("typewriter");
   
   if (target) {
-    const text = "Angehender Fachinformatiker für Anwendungsentwicklung! ✨";
+    const text = "Angehender Fachinformatiker für Anwendungsentwicklung!";
     let index = 0;
 
     function type() {
@@ -253,3 +253,4 @@ if (openBtn && closeBtn && modal) {
     }
   });
 }
+
