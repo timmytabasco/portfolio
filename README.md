@@ -1,4 +1,4 @@
-# 🌐 Portfolio – Tim Petersdorff
+# 🌐 Portfolio 
 
 This repository contains the source code for my **personal developer portfolio**, built to present my work as an **upcoming software developer (Fachinformatiker für Anwendungsentwicklung)**.  
 The portfolio is designed to be clean, structured, and minimal — highlighting both **technical precision** and **modern frontend aesthetics**.
