@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+       transitionDelay: ['responsive', 'hover', 'focus'],
       keyframes: {
         blink: {
           '0%, 100%': { opacity: '0' },

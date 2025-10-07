@@ -36,21 +36,21 @@
         <!-- Untere Zeile: Menü mittig -->
         <ul class="hidden md:flex mt-4 flex justify-center items-center text-lg md:text-xl font-semibold text-neutral-900 space-x-12">
           <li>
-            <a href="#about" class="inline-block group">
+            <a href="#about" class="nav-link inline-block group">
               <span class="inline-block text-neutral-500 transition-all duration-300 transform hover:text-neutral-900 hover:scale-110">
                 Über mich
               </span>
             </a>
           </li>
           <li>
-            <a href="#projects" class="inline-block group">
+            <a href="#projects" class="nav-link inline-block group">
               <span class="inline-block text-neutral-500 transition-all duration-300 transform hover:text-neutral-900 hover:scale-110">
                 Projekte
               </span>
             </a>
           </li>
           <li>
-            <a href="#contact" class="inline-block group">
+            <a href="#contact" class="nav-link inline-block group">
               <span class="inline-block text-neutral-500 transition-all duration-300 transform hover:text-neutral-900 hover:scale-110">
                 Kontakt
               </span>
@@ -67,7 +67,7 @@
           </div>
         </button>
 
-        <!-- MOBILE MENU -->
+      
        <!-- MOBILE MENU -->
 <div id="mobile-menu"
      class="md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-yellow-50 backdrop-blur-lg shadow-md"
@@ -132,185 +132,275 @@
           <span class="blinking-cursor animate-blink">|</span>
         </div>
         </div>
-        <p class="text-lg text-stone-700 max-w-2xl mx-auto leading-relaxed mt-8 border-2 border-dotted border-neutral-400 rounded-2xl p-6 bg-white/40 shadow-xl">
+        <p  data-delay="1300ms"class="text-lg text-stone-700 max-w-2xl mx-auto leading-relaxed mt-8 border-2 border-dotted border-neutral-400 rounded-2xl p-6 bg-white/40 shadow-xl fade-in">
         Ich entwickle Webanwendungen mit Fokus auf eine saubere Struktur, klare Logik und moderne Benutzeroberflächen.
         </p>
       </div>
       </div>
     </main>
+    <section id="about" class="scroll-mt-24 pt-20 bg-yellow-50/40">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <!-- Überschrift -->
+          <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">
+              Über mich
+            </h2>
+            <p class="text-stone-600 text-lg">
+              Ein Einblick in meine Motivation und Arbeitsweise.
+            </p>
+          </div>
 
-    <section id="about" class="scroll-mt-2 pt-20 bg-yellow-50">
-      <section id="about" class="scroll-mt-24 pt-20 bg-yellow-50/40">
-  <div class="container mx-auto px-4">
-    <div class="max-w-4xl mx-auto">
-      <!-- Überschrift -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">
-          Über mich
-        </h2>
-        <p class="text-stone-600 text-lg">
-          Ein Einblick in meine Motivation und Arbeitsweise.
-        </p>
-      </div>
+          <!-- Grid: Bild links / Text rechts -->
+          <div class="grid md:grid-cols-[1fr_2.0fr] gap-24 items-start">
+            <!-- Bild -->
+            <div class="flex justify-center md:justify-end fade-in-left">
+              <img src="img/mypic.png" alt="Tim Petersdorff – Portrait" class="w-96 h-[450px] object-cover shadow-[0_6px_20px_rgba(0,0,0,0.05)] border-2 border-yellow-100 rounded-2xl">
+            </div>
 
-      <!-- Bild -->
-      <div class="flex justify-center">
-        <img src="img/mypic.png" alt="Tim Petersdorff – Portrait" 
-             class="w-64 h-64 mb-10 object-cover shadow-[0_6px_20px_rgba(0,0,0,0.05)] border-2 border-yellow-100 rounded-full">
-      </div>
+            <!-- Text Cards rechts -->
+            <div class="space-y-8">
+              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <p class="text-lg text-stone-700 leading-relaxed">
+                  Ich bin <strong>Tim</strong>, angehender Fachinformatiker für Anwendungsentwicklung.
+                  Ich lege Wert auf strukturierte Lösungen, sauberen Code und ein Design, das klar, modern und funktional ist. Technik soll nicht nur funktionieren, sondern intuitiv wirken.
+                </p>
+              </div>
 
-      <!-- Text Cards -->
-      <div class="space-y-8">
-        <!-- Card 1 -->
-        <div class="bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <p class="text-lg text-stone-700 leading-relaxed">
-            Ich bin <strong>Tim</strong> – angehender Fachinformatiker für Anwendungsentwicklung. 
-            Ich mag sauberen Code, klare Strukturen und das Gefühl, wenn Technik einfach funktioniert.
-          </p>
-        </div>
+              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <p class="text-lg text-stone-700 leading-relaxed">
+                  Am meisten Spaß macht mir, Ideen in funktionierende Webanwendungen zu verwandeln.
+                  Ich arbeite mit aktuellen Technologien wie <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Tailwind CSS</strong> und <strong>MariaDB</strong>. Ich entwickle Projekte von Grund auf, vom Konzept bis zum fertigen Produkt.
+                </p>
+              </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <p class="text-lg text-stone-700 leading-relaxed">
-            Mein Weg in die IT begann nach einer Zeit im <strong>Logistikbereich</strong>. 
-            Dort habe ich gelernt, unter Druck organisiert und zuverlässig zu arbeiten – 
-            Eigenschaften, die ich heute beim Entwickeln täglich einsetze.
-          </p>
-        </div>
+              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <p class="text-lg text-stone-700 leading-relaxed">
+                  Ich achte auf <strong>saubere Architektur</strong>, <strong>verständliche Logik</strong> und eine gute <strong>User Experience</strong>.
+                  Neue Tools auszuprobieren und mich weiterzuentwickeln gehört für mich selbstverständlich dazu.
+                  Mein Ziel: Lösungen zu entwickeln, die <strong>technisch solide</strong> und <strong>visuell ansprechend</strong> sind.
+                </p>
+              </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <p class="text-lg text-stone-700 leading-relaxed">
-            Ich entwickle mit <strong>JavaScript</strong>, <strong>Node.js</strong>, 
-            <strong>Express</strong>, <strong>MariaDB</strong> und <strong>Tailwind CSS</strong> 
-            Anwendungen, die strukturiert, wartbar und modern sind.
-          </p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-          <p class="text-lg text-stone-700 leading-relaxed">
-            In meiner Freizeit treibe ich <strong>Kraftsport</strong> und fahre gerne Rad – 
-            Bewegung bringt für mich Balance und inspiriert oft zu neuen Ideen beim Programmieren.
-          </p>
+              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <p class="text-lg text-stone-700 leading-relaxed">
+                  Neben dem Programmieren bin ich oft im Gym oder draußen unterwegs. Bewegung hilft mir, fokussiert zu bleiben und kreative Ideen zu entwickeln.
+                  Ich glaube, Balance ist entscheidend, sowohl in der Entwicklung, als auch im Leben.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="container mx-auto px-4 max-w-6xl mt-32">
+        <div class="text-center mb-12">
+          <h2 class="fade-in text-4xl md:text-5xl font-bold text-neutral-900 mb-3">Mein Tech-Stack</h2>
+          <p class="fade-in text-stone-600 text-lg">
+            Technologien, mit denen ich entwickle und täglich arbeite.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <!-- HTML5 -->
+          <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fab fa-html5 text-5xl text-orange-500 group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">HTML5</span>
+          </a>
+
+          <!-- CSS3 -->
+          <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fab fa-css3-alt text-5xl text-blue-500 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">CSS3</span>
+          </a>
+
+          <!-- JavaScript -->
+          <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="fade-in relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fab fa-js text-5xl text-yellow-500 group-hover:drop-shadow-[0_0_10px_rgba(234,179,8,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">JavaScript</span>
+          </a>
+
+          <!-- Node.js -->
+          <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fab fa-node-js text-5xl text-green-600 group-hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">Node.js</span>
+          </a>
+
+          <!-- Express -->
+          <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fas fa-server text-5xl text-stone-600 group-hover:drop-shadow-[0_0_10px_rgba(82,82,82,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">Express</span>
+          </a>
+
+          <!-- Tailwind CSS -->
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fas fa-wind text-5xl text-sky-500 group-hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">Tailwind CSS</span>
+          </a>
+
+          <!-- MariaDB -->
+          <a href="https://mariadb.org" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fas fa-database text-5xl text-blue-700 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">MariaDB</span>
+          </a>
+
+          <!-- Git -->
+          <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fab fa-git-alt text-5xl text-orange-600 group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">Git</span>
+          </a>
+
+          <!-- Vite -->
+          <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fas fa-bolt text-5xl text-violet-500 group-hover:drop-shadow-[0_0_10px_rgba(139,92,246,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">Vite</span>
+          </a>
+
+          <!-- REST / JSON -->
+          <a href="https://restfulapi.net" target="_blank" rel="noopener noreferrer" class="fade-in bg-gradient-to-br from-yellow-100 via-yellow-50 to-white border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition transform hover:scale-[1.03] group">
+            <i class="fas fa-code text-5xl text-neutral-700 group-hover:drop-shadow-[0_0_10px_rgba(115,115,115,0.4)]"></i>
+            <span class="mt-3 text-sm font-semibold text-neutral-800">REST / JSON</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="scroll-mt-24 pt-24 pb-24 bg-yellow-50/40 mt-32">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="fade-in md:text-5xl font-bold text-neutral-900 mb-3">Projekte</h2>
+      <p class="fade-in text-lg">Ausgewählte Arbeiten, die meine Schwerpunkte in Frontend- und Fullstack-Entwicklung zeigen.</p>
     </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- ========================== Lehrwerk App ========================== -->
+      <article class="bg-white/70 border border-yellow-100/60 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group fade-in">
+        <div class="relative overflow-hidden">
+          <img src="img/lehrwerk-preview.jpg" alt="Lehrwerk App Screenshot"
+               class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-2">Lehrwerk App</h3>
+          <p class="text-stone-700 leading-relaxed mb-4">
+            Eine Fullstack-Webanwendung für die Lehrwerk GmbH, entwickelt im Rahmen meines Abschlussprojekts.
+            Ziel war es, die interne Verwaltung von Kursen, Terminen und Kontaktanfragen zu digitalisieren.
+            <span id="more-lehrwerk" class="hidden opacity-0 transition-all duration-500 block mt-2">
+              Das System basiert auf <strong>Node.js</strong>, <strong>Express</strong> und <strong>MariaDB</strong> und stellt eine
+              <strong>REST-API</strong> bereit, über die Inhalte dynamisch gesteuert werden.  
+              Das Frontend wurde mit <strong>Vanilla JavaScript</strong> und <strong>Tailwind CSS</strong> umgesetzt und bietet ein integriertes
+              <strong>CMS-Interface</strong> für die Bearbeitung von JSON-basierten Inhalten.  
+              Eine Herausforderung bestand darin, die Datenstrukturen so flexibel zu gestalten, dass Seiteninhalte
+              ohne erneutes Deployment angepasst werden können.  
+              Die Anwendung wird produktiv bei der Lehrwerk GmbH eingesetzt.
+            </span>
+          </p>
+
+          <button onclick="openProject('lehrwerk')" class="text-yellow-700 font-semibold hover:text-yellow-800 transition">
+          Details ansehen
+          </button>
+
+        </div>
+      </article>
+
+      <!-- ========================== Portfolio ========================== -->
+      <article class="bg-white/70 border border-yellow-100/60 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group fade-in">
+        <div class="relative overflow-hidden">
+          <img src="img/portfolio.png" alt="Portfolio Screenshot"
+               class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-2">Mein Portfolio</h3>
+          <p class="text-stone-700 leading-relaxed mb-4">
+            Diese Seite ist mein persönliches Entwicklerportfolio – konzipiert als moderne, minimalistische
+            Single-Page-Anwendung, die meine Projekte, Fähigkeiten und Erfahrungen präsentiert.
+            <span id="more-portfolio" class="hidden opacity-0 transition-all duration-500 block mt-2">
+              Entwickelt mit <strong>Vite</strong>, <strong>Tailwind CSS</strong> und <strong>Vanilla JavaScript</strong>.
+              Besonderes Augenmerk lag auf Performance, klarer Struktur und sanften
+              <strong>Scroll-Animationen (Intersection Observer)</strong>, die ein dynamisches SPA-Gefühl erzeugen.  
+              Das Portfolio ist komplett responsive, modular aufgebaut und lässt sich jederzeit
+              um weitere Projekte und Seiten erweitern.  
+              Neben der Gestaltung habe ich den Code so dokumentiert, dass er als Template
+              für zukünftige Seiten oder Kundenprojekte dienen kann.
+            </span>
+          </p>
+
+         <button
+         onclick="openProject('portfolio')" class="text-yellow-700 font-semibold hover:text-yellow-800 transition">
+        📄 Details ansehen
+        </button>
+
+          
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- ========== Projekt-Detail Overlay ========== -->
+<div id="project-overlay"
+     class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-500 z-50 flex justify-end">
+  
+  <!-- Slide-In Panel -->
+  <div id="project-detail"
+       class="bg-yellow-50 w-full sm:w-[600px] md:w-[700px] h-full shadow-2xl transform translate-x-full transition-transform duration-500 overflow-y-auto p-8">
+    
+    <!-- Close Button -->
+    <button id="close-project"
+            class="text-stone-600 hover:text-stone-900 text-2xl absolute top-4 right-6 font-bold">×</button>
+    
+    <div id="project-content" class="space-y-8 mt-8">
+      <!-- Dynamischer Inhalt kommt hier per JS rein -->
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section id="contact" class="scroll-mt-24 pt-24 pb-24 bg-yellow-50/60 fade-in" data-delay="300ms">
+  <div class="container mx-auto px-4 max-w-3xl text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+      Kontakt
+    </h2>
+    <p class="text-lg text-stone-600 mb-10">
+      Schreib mir eine Nachricht – ich melde mich so schnell wie möglich zurück.
+    </p>
+
+    <form action="https://formspree.io/f/xnngbnnn" method="POST"
+          class="space-y-6 bg-white/70 border border-yellow-100/70 rounded-2xl shadow-lg p-8 text-left">
+
+      <div>
+        <label for="name" class="block text-stone-700 font-semibold mb-2">Name</label>
+        <input type="text" id="name" name="name" required
+               class="w-full px-4 py-3 border border-yellow-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-200">
+      </div>
+
+      <div>
+        <label for="email" class="block text-stone-700 font-semibold mb-2">E-Mail</label>
+        <input type="email" id="email" name="email" required
+               class="w-full px-4 py-3 border border-yellow-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-200">
+      </div>
+
+      <div>
+        <label for="message" class="block text-stone-700 font-semibold mb-2">Nachricht</label>
+        <textarea id="message" name="message" rows="5" required
+                  class="w-full px-4 py-3 border border-yellow-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-200"></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-neutral-900 text-yellow-50 font-semibold py-3 rounded-xl hover:bg-neutral-800 transition-all">
+        📤 Nachricht senden
+      </button>
+    </form>
   </div>
 </section>
 
 
-      <div class="container mx-auto px-4 max-w-5xl mt-20">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-3">Mein Tech Stack</h2>
-        <p class="text-stone-600 text-lg">
-        Technologien, mit denen ich entwickle und täglich arbeite.
-        </p>
-      </div>
+    
+    
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        <!-- HTML5 -->
-        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fab fa-html5 text-5xl text-orange-500 group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">HTML5</span>
-        </a>
-
-        <!-- CSS3 -->
-        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fab fa-css3-alt text-5xl text-blue-500 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">CSS3</span>
-        </a>
-
-        <!-- JavaScript -->
-        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fab fa-js text-5xl text-yellow-500 group-hover:drop-shadow-[0_0_10px_rgba(234,179,8,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">JavaScript</span>
-        </a>
-
-        <!-- Node.js -->
-        <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fab fa-node-js text-5xl text-green-600 group-hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">Node.js</span>
-        </a>
-
-        <!-- Express -->
-        <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fas fa-server text-5xl text-stone-600 group-hover:drop-shadow-[0_0_10px_rgba(82,82,82,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">Express</span>
-        </a>
-
-        <!-- Tailwind CSS -->
-        <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fas fa-wind text-5xl text-sky-500 group-hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">Tailwind CSS</span>
-        </a>
-
-        <!-- MariaDB -->
-        <a href="https://mariadb.org" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fas fa-database text-5xl text-blue-700 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">MariaDB</span>
-        </a>
-
-        <!-- Git -->
-        <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fab fa-git-alt text-5xl text-orange-600 group-hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">Git</span>
-        </a>
-
-        <!-- Vite -->
-        <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fas fa-bolt text-5xl text-violet-500 group-hover:drop-shadow-[0_0_10px_rgba(139,92,246,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">Vite</span>
-        </a>
-
-        <!-- REST / JSON -->
-        <a href="https://restfulapi.net" target="_blank" rel="noopener noreferrer"
-         class="relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-white 
-            border border-yellow-100/70 rounded-2xl p-5 flex flex-col items-center 
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
-            transition transform hover:scale-[1.03] group">
-        <i class="fas fa-code text-5xl text-neutral-700 group-hover:drop-shadow-[0_0_10px_rgba(115,115,115,0.4)]"></i>
-        <span class="mt-3 text-sm font-semibold text-neutral-800">REST / JSON</span>
-        </a>
-      </div>
-      </div>
-    </section>
 
     <footer class="bg-yellow-50 text-neutral-900 border border-neutral-300 text-sm py-4 mt-20">
       <div class="container mx-auto px-4 flex flex-col md:flex-col justify-center items-center space-y-2 md:space-y-2 text-center">
