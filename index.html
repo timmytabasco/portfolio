@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./dist/output.css" rel="stylesheet">
   </head>
-  <body id="page-body" class="bg-yellow-50 text-gray-900 antialiased font-[Poppins] transition-opacity duration-500 opacity-100">
-    <!-- Backdrop Overlay -->
+  <body id="page-body" 
+        class="bg-yellow-50 text-gray-900 antialiased font-[Poppins] transition-opacity duration-500 opacity-100">
+
     <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-40 opacity-0 pointer-events-none transition-all duration-300 z-40 backdrop-blur-sm"></div>
 
     <header class="bg-yellow-50/80 backdrop-blur-md shadow-[0_1px_6px_rgba(0,0,0,0.06)] sticky top-0 z-50">
@@ -27,10 +28,6 @@
             </span>
           </a>
 
-          <!-- Button rechts -->
-          <a href="/resume.pdf" download class="hidden md:flex px-5 py-2 bg-neutral-900 text-yellow-50 font-bold rounded-xl hover:bg-neutral-800 transition">
-            📄 Lebenslauf
-          </a>
         </div>
 
         <!-- Untere Zeile: Menü mittig -->
@@ -38,7 +35,7 @@
           <li>
             <a href="#about" class="nav-link inline-block group">
               <span class="inline-block text-neutral-500 transition-all duration-300 transform hover:text-neutral-900 hover:scale-110">
-                Über mich
+                Profil       
               </span>
             </a>
           </li>
@@ -57,6 +54,7 @@
             </a>
           </li>
         </ul>
+       
 
         <!-- Hamburger Button -->
         <button id="hamburger" class="translate-x-80 md:hidden text-neutral-900 w-10 h-10 flex flex-col justify-center items-center focus:outline-none focus:ring-opacity-50 rounded-lg transition-all duration-200">
@@ -77,7 +75,7 @@
     <li class="menu-item opacity-0 translate-y-4 scale-95 transition-all duration-300 ease-out w-full">
       <a href="#about"
          class="mobile-nav-link block text-center text-xl font-semibold text-neutral-900 py-3 px-4 rounded-xl active:bg-yellow-100 active:scale-95 transition-all duration-150">
-         Über mich
+         Profil
       </a>
     </li>
 
@@ -95,16 +93,6 @@
       </a>
     </li>
   </ul>
-
-  <!-- 📄 Lebenslauf-Button -->
-  <div class="mt-8 border-t border-neutral-200 w-full flex justify-center pt-6 pb-8">
-    <a href="/resume.pdf"
-       download
-       class="inline-flex items-center space-x-2 bg-neutral-900 text-yellow-50 font-semibold px-6 py-3 rounded-2xl active:scale-95 transition-all duration-200 shadow-sm hover:bg-neutral-800">
-      <span class="text-lg">📄</span>
-      <span>Lebenslauf herunterladen</span>
-    </a>
-  </div>
 </div>
 
  </nav>
@@ -115,7 +103,7 @@
       <div class="container mx-auto px-4">
       <div class="w-full max-w-4xl mx-auto text-center">
         <div class="flex justify-center items-center space-x-8 mb-8">
-        <a href="https://github.com/typet-dev" target="_blank" rel="noopener noreferrer" class="group">
+        <a href="https://github.com/timmytabasco" target="_blank" rel="noopener noreferrer" class="group">
           <i class="fab fa-github text-6xl md:text-6xl text-neutral-900 transition-all duration-300 transform group-hover:scale-125 group-hover:text-yellow-100 filter group-hover:drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"></i>
         </a>
         <a href="https://www.linkedin.com/in/tim-petersdorff-114097340/" target="_blank" rel="noopener noreferrer" class="group">
@@ -132,68 +120,388 @@
           <span class="blinking-cursor animate-blink">|</span>
         </div>
         </div>
-        <p  data-delay="1300ms"class="text-lg text-stone-700 max-w-2xl mx-auto leading-relaxed mt-8 border-2 border-dotted border-neutral-400 rounded-2xl p-6 bg-white/40 shadow-xl fade-in">
+        <p  data-delay="1300ms"class="text-lg text-stone-700 max-w-2xl mx-auto leading-relaxed mt-8 border border-stone-400 rounded-2xl p-6 bg-white/40 shadow-xl fade-in">
         Ich entwickle Webanwendungen mit Fokus auf eine saubere Struktur, klare Logik und moderne Benutzeroberflächen.
         </p>
       </div>
       </div>
     </main>
-    <section id="about" class="scroll-mt-24 pt-20 bg-yellow-50/40">
-      <div class="container mx-auto px-4">
-        <div class="max-w-6xl mx-auto">
-          <!-- Überschrift -->
-          <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-2">
-              Über mich
-            </h2>
-            <p class="text-stone-600 text-lg">
-              Ein Einblick in meine Motivation und Arbeitsweise.
-            </p>
-          </div>
 
-          <!-- Grid: Bild links / Text rechts -->
-          <div class="grid md:grid-cols-[1fr_2.0fr] gap-24 items-start">
-            <!-- Bild -->
-            <div class="flex justify-center md:justify-end fade-in-left">
-              <img src="img/mypic.png" alt="Tim Petersdorff – Portrait" class="w-96 h-[450px] object-cover shadow-[0_6px_20px_rgba(0,0,0,0.05)] border-2 border-yellow-100 rounded-2xl">
-            </div>
+ <!-- ================= PROFIL ================= -->
+<section id="about" class="pt-32 pb-32 bg-yellow-50/40">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col items-center">
 
-            <!-- Text Cards rechts -->
-            <div class="space-y-8">
-              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                <p class="text-lg text-stone-700 leading-relaxed">
-                  Ich bin <strong>Tim</strong>, angehender Fachinformatiker für Anwendungsentwicklung.
-                  Ich lege Wert auf strukturierte Lösungen, sauberen Code und ein Design, das klar, modern und funktional ist. Technik soll nicht nur funktionieren, sondern intuitiv wirken.
-                </p>
-              </div>
+    <!-- Kurzprofil Head -->
+    <div class="text-center mb-24 max-w-5xl fade-in">
+      <h2 class="text-4xl md:text-6xl font-bold text-neutral-900 mb-6">
+        PROFIL
+      </h2>
+      <p class="text-stone-600 text-lg leading-relaxed">
+        Ein kompakter Überblick über meine fachliche Ausrichtung und meinen Einstieg
+        als Fachinformatiker für Anwendungsentwicklung.
+      </p>
+    </div>
 
-              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                <p class="text-lg text-stone-700 leading-relaxed">
-                  Am meisten Spaß macht mir, Ideen in funktionierende Webanwendungen zu verwandeln.
-                  Ich arbeite mit aktuellen Technologien wie <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>Tailwind CSS</strong> und <strong>MariaDB</strong>. Ich entwickle Projekte von Grund auf, vom Konzept bis zum fertigen Produkt.
-                </p>
-              </div>
+    <!-- Bild + Text -->
+    <div class="grid md:grid-cols-2 gap-16 items-start w-full max-w-5xl mx-auto">
 
-              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                <p class="text-lg text-stone-700 leading-relaxed">
-                  Ich achte auf <strong>saubere Architektur</strong>, <strong>verständliche Logik</strong> und eine gute <strong>User Experience</strong>.
-                  Neue Tools auszuprobieren und mich weiterzuentwickeln gehört für mich selbstverständlich dazu.
-                  Mein Ziel: Lösungen zu entwickeln, die <strong>technisch solide</strong> und <strong>visuell ansprechend</strong> sind.
-                </p>
-              </div>
-
-              <div class="fade-in-right bg-white/70 border border-yellow-100/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                <p class="text-lg text-stone-700 leading-relaxed">
-                  Neben dem Programmieren bin ich oft im Gym oder draußen unterwegs. Bewegung hilft mir, fokussiert zu bleiben und kreative Ideen zu entwickeln.
-                  Ich glaube, Balance ist entscheidend, sowohl in der Entwicklung, als auch im Leben.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Foto -->
+      <div class="flex justify-center fade-in-left">
+        <img
+          src="img/mypic.png"
+          alt="Tim Petersdorff – Fachinformatiker für Anwendungsentwicklung"
+          class="w-[320px] h-[420px] object-cover rounded-2xl
+                 bg-white border border-neutral-200
+                 shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
       </div>
 
-      <div class="container mx-auto px-4 max-w-6xl mt-32">
+      <!-- Text -->
+      <div class="space-y-8 fade-in-right">
+        <p class="text-xl leading-relaxed text-neutral-800">
+          Ich bin Tim Petersdorff, Fachinformatiker für Anwendungsentwicklung.
+          Mein Schwerpunkt liegt auf der Entwicklung von Webanwendungen, bei denen
+          der Aufbau nachvollziehbar bleibt und Änderungen gezielt umgesetzt werden können.
+        </p>
+
+        <p class="text-xl leading-relaxed text-stone-700">
+          Während meiner Ausbildung und der anschließenden Praxisphase habe ich gemerkt,
+          dass mir besonders Projekte liegen, bei denen Logik, Oberfläche und Daten
+          sinnvoll zusammenspielen. Ich arbeite strukturiert und mit dem Anspruch,
+          Lösungen zu entwickeln, die auch langfristig tragfähig bleiben.
+        </p>
+      </div>
+    </div>
+
+    <!-- Faktenkarten -->
+    <div class="mt-24 w-full fade-in">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <div class="bg-white/80 rounded-2xl p-8 shadow-lg fade-in" data-delay="100ms">
+          <span class="text-sm text-stone-500">Abschluss</span>
+          <p class="mt-3 text-xl font-semibold text-neutral-900">
+            Fachinformatiker für Anwendungsentwicklung (IHK)
+          </p>
+        </div>
+
+        <div class="bg-white/80 rounded-2xl p-8 shadow-lg fade-in" data-delay="200ms">
+          <span class="text-sm text-stone-500">Schwerpunkt</span>
+          <p class="mt-3 text-xl font-semibold text-neutral-900">
+            Webentwicklung / Anwendungsentwicklung
+          </p>
+        </div>
+
+        <div class="bg-white/80 rounded-2xl p-8 shadow-lg fade-in" data-delay="300ms">
+          <span class="text-sm text-stone-500">Praxis</span>
+          <p class="mt-3 text-xl font-semibold text-neutral-900">
+            6 Monate Praktikum & Abschlussprojekt
+          </p>
+        </div>
+
+        <div class="bg-white/80 rounded-2xl p-8 shadow-lg fade-in" data-delay="400ms">
+          <span class="text-sm text-stone-500">Ziel</span>
+          <p class="mt-3 text-xl font-semibold text-neutral-900">
+            Einstieg in die Anwendungsentwicklung
+          </p>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="mt-24 flex flex-col md:flex-row justify-center gap-6 fade-in">
+
+        <a href="img/lebenslauf.pdf"
+         target="_blank"
+          class="px-8 py-4 rounded-xl bg-yellow-100 border-2 border-neutral-300
+            text-neutral-900 font-semibold
+            hover:bg-neutral-100 transition">
+            Lebenslauf (PDF)
+        </a>
+    </div>
+
+    <!-- Über mich -->
+    <div class="max-w-5xl mx-auto mt-40 fade-in">
+
+      <h3 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-12 text-center">
+        Über mich
+      </h3>
+
+      <div class="space-y-10 text-left">
+        <p class="text-lg leading-relaxed text-stone-900">
+          Während meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung habe ich
+          schnell gemerkt, dass mir besonders die Arbeit an klar aufgebauten Anwendungen liegt.
+          Mich interessiert nicht nur, dass etwas funktioniert, sondern warum es funktioniert
+          und wie einzelne Teile sinnvoll zusammenspielen.
+        </p>
+
+        <p class="text-lg leading-relaxed text-stone-900">
+          Ich betrachte Anwendungen nicht isoliert, sondern als zusammenhängende Systeme.
+          Oberfläche, Anwendungslogik und Datenhaltung gehören für mich eng zusammen
+          und sollten nachvollziehbar aufgebaut sein. Änderungen sollten gezielt möglich sein,
+          ohne an anderer Stelle neue Probleme zu verursachen.
+        </p>
+
+        <p class="text-lg leading-relaxed text-stone-900">
+          In meiner Arbeitsweise bin ich konzentriert und pragmatisch.
+          Ich arbeite mich gerne tief in neue Themen ein und lege Wert darauf,
+          Zusammenhänge wirklich zu verstehen. So entstehen Lösungen,
+          die nicht nur im Moment funktionieren, sondern auch später noch sinnvoll
+          weiterentwickelt werden können.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= MEHRWERT ================= -->
+<section id="mehrwert" class="pt-32 pb-32 bg-yellow-50/40 mt-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Head -->
+    <div class="text-center mb-24 max-w-4xl mx-auto fade-in">
+      <h2 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
+        Mehrwert
+      </h2>
+      <p class="text-stone-600 text-lg leading-relaxed">
+        Wie ich in Projekten arbeite und welchen Beitrag ich im Team leisten kann.
+      </p>
+    </div>
+
+    <!-- Mehrwert Grid -->
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Kasten 1 -->
+      <div class="bg-white/80 rounded-2xl border-2 border-stone-400 p-10 shadow-sm fade-in" data-delay="100ms">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Sauberer Projektaufbau
+        </h3>
+        <p class="text-stone-700 leading-relaxed">
+          Ich lege Wert auf eine klare Struktur im Code und in der Projektarchitektur.
+          Anwendungen sollen verständlich bleiben, auch wenn sie wachsen oder später
+          von anderen weiterentwickelt werden.
+        </p>
+      </div>
+
+      <!-- Kasten 2 -->
+      <div class="bg-white/80 rounded-2xl border-2 border-stone-400 p-10 shadow-sm fade-in" data-delay="200ms">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Ganzheitlicher Blick
+        </h3>
+        <p class="text-stone-700 leading-relaxed">
+          Für mich endet Entwicklung nicht beim Schreiben von Funktionen.
+          Oberfläche, Logik und Daten gehören zusammen und müssen
+          aufeinander abgestimmt sein, damit eine Anwendung stabil bleibt.
+        </p>
+      </div>
+
+      <!-- Kasten 3 -->
+      <div class="bg-white/80 rounded-2xl border-2 border-stone-400 p-10 shadow-sm fade-in" data-delay="300ms">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Verlässliche Arbeitsweise
+        </h3>
+        <p class="text-stone-700 leading-relaxed">
+          Ich arbeite konzentriert, nachvollziehbar und mit einem hohen Anspruch
+          an die eigene Arbeit. Absprachen, saubere Umsetzung und Nachvollziehbarkeit
+          sind mir wichtiger als schnelle, unklare Lösungen.
+        </p>
+      </div>
+
+      <!-- Kasten 4 -->
+      <div class="bg-white/80 rounded-2xl border-2 border-stone-400 p-10 shadow-sm fade-in" data-delay="400ms">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Einbindung ins Team
+        </h3>
+        <p class="text-stone-700 leading-relaxed">
+          Ich arbeite gerne im Austausch mit anderen und bringe mich dort ein,
+          wo Struktur und Klarheit helfen. Mir ist wichtig, dass Entscheidungen
+          nachvollziehbar sind und gemeinsam getragen werden.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= PRAXISPHASE ================= -->
+<section id="praxisphase" class="pt-32 pb-32 bg-yellow-50/40">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Head -->
+    <div class="text-center mb-24 max-w-4xl mx-auto fade-in">
+      <h2 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
+        Praxisphase
+      </h2>
+      <p class="text-stone-600 text-lg leading-relaxed">
+        Sechs Monate praktische Tätigkeit im Rahmen meiner Ausbildung
+        zum Fachinformatiker für Anwendungsentwicklung.
+      </p>
+    </div>
+
+    <!-- Einordnung -->
+    <div class="max-w-5xl mx-auto mb-24 fade-in">
+     <div class="bg-white/80 rounded-2xl p-10 shadow-xl fade-in" data-delay="400ms">
+        <p class="text-xl text-stone-900 leading-relaxed text-center">
+          Die Praxisphase fand bei einem Bildungsträger statt und war praxis- sowie
+          projektorientiert aufgebaut. Ziel war es, praktische Erfahrung
+          im Projektumfeld zu sammeln und Abläufe in der Anwendungsentwicklung
+          kennenzulernen.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="max-w-4xl mx-auto relative border-l border-neutral-300 pl-12 space-y-20">
+
+      <!-- Block 1 -->
+      <div class="fade-in">
+        <span class="absolute -left-[30px] mt-2 w-4 h-4 rounded-full bg-neutral-400"></span>
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-3">
+          Mitarbeit im Projektumfeld
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Während der Praxisphase habe ich im Umfeld eines internen
+          Digitalisierungsprojekts gearbeitet. Dabei ging es um die Analyse
+          von Abläufen, das Verständnis fachlicher Anforderungen und
+          unterstützende Tätigkeiten im technischen Umfeld.
+        </p>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="fade-in">
+        <span class="absolute -left-[30px] mt-2 w-4 h-4 rounded-full bg-neutral-400"></span>
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-3">
+          Technische Aufgaben & Umsetzung
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Zu meinen Aufgaben gehörten kleinere technische Umsetzungen,
+          Anpassungen sowie Tests. So konnte ich erleben, wie Anforderungen
+          aufgenommen, bewertet und schrittweise umgesetzt werden.
+        </p>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="fade-in">
+        <span class="absolute -left-[30px] mt-2 w-4 h-4 rounded-full bg-neutral-400"></span>
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-3">
+          Abschlussprojekt (10 Wochen / 80 Stunden)
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Nach Genehmigung durch die IHK habe ich mein Abschlussprojekt
+          umgesetzt. Gegenstand war die vollständige Entwicklung einer
+          webbasierten Anwendung. Die Projektphase umfasste 80 Stunden,
+          verteilt über einen Zeitraum von zehn Wochen, inklusive
+          Planung, Umsetzung, Dokumentation sowie Vorbereitung auf
+          Präsentation und Fachgespräch.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= ARBEITSWEISE ================= -->
+<section id="arbeitsweise" class="pt-32 pb-32 bg-yellow-50/30">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Head -->
+    <div class="text-center mb-24 max-w-4xl mx-auto fade-in">
+      <h2 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
+        Arbeitsweise & Zusammenarbeit
+      </h2>
+      <p class="text-stone-600 text-lg leading-relaxed">
+        Wie ich Aufgaben angehe, im Team arbeite und Verantwortung übernehme.
+      </p>
+    </div>
+
+    <!-- Inhalt -->
+    <div class="max-w-5xl mx-auto space-y-20">
+
+      <!-- Block 1 -->
+      <div class="fade-in">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Struktur statt Chaos
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Bevor ich mit der Umsetzung beginne, verschaffe ich mir einen Überblick
+          über Anforderungen, Abhängigkeiten und mögliche Auswirkungen.
+          Mir ist wichtig zu verstehen, wie sich eine Änderung auf andere
+          Teile der Anwendung auswirkt, bevor ich sie umsetze.
+        </p>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="fade-in">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Verantwortung im Arbeitsalltag
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Ich arbeite Aufgaben zuverlässig und nachvollziehbar ab.
+          Dazu gehört für mich auch, Entscheidungen zu dokumentieren
+          und Ergebnisse so aufzubereiten, dass sie für andere verständlich bleiben.
+          Wenn etwas unklar ist, spreche ich es an, statt es zu übergehen.
+        </p>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="fade-in">
+        <h3 class="text-2xl font-semibold text-neutral-900 mb-4">
+          Zusammenarbeit im Team
+        </h3>
+        <p class="text-lg text-stone-700 leading-relaxed">
+          Ich arbeite ruhig und konzentriert, schätze aber den Austausch im Team.
+          Mir ist wichtig, dass Absprachen eingehalten werden und jeder weiß,
+          woran gearbeitet wird. So entstehen Lösungen,
+          die gemeinsam getragen und weiterentwickelt werden können.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= AUSRICHTUNG ================= -->
+<section id="ausrichtung" class="pt-32 pb-32 bg-yellow-50/30">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="max-w-4xl mx-auto fade-in text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
+        Ausrichtung
+      </h2>
+      <p class="text-stone-600 text-lg leading-relaxed">
+        Wo ich aktuell stehe und wie ich mir meinen Einstieg vorstelle.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-10 fade-in">
+      <p class="text-lg text-stone-700 leading-relaxed text-center">
+        Nach dem Abschluss meiner Ausbildung suche ich einen Einstieg
+        in die Anwendungsentwicklung, bei dem ich in bestehende Projekte
+        eingebunden werde und Schritt für Schritt Verantwortung übernehmen kann.
+        Mir ist wichtig, Zusammenhänge zu verstehen und nicht nur einzelne
+        Aufgaben abzuarbeiten.
+      </p>
+
+      <p class="text-lg text-stone-700 leading-relaxed text-center">
+        Ich arbeite gerne in einem Umfeld, in dem klar kommuniziert wird
+        und technische Entscheidungen nachvollziehbar sind.
+        Besonders gut passe ich in Teams, die strukturiert arbeiten
+        und bei denen man sich gegenseitig unterstützt,
+        statt Probleme einfach weiterzureichen.
+      </p>
+
+      <p class="text-lg text-stone-700 leading-relaxed text-center">
+        Mir geht es nicht darum, möglichst schnell möglichst viel zu machen.
+        Ich lege Wert darauf, Dinge sauber umzusetzen,
+        Fragen zu stellen, wenn etwas unklar ist,
+        und Lösungen zu entwickeln, die auch später noch verständlich sind.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+    <div class="container mx-auto px-4 max-w-6xl mt-20">
         <div class="text-center mb-12">
           <h2 class="fade-in text-4xl md:text-5xl font-bold text-neutral-900 mb-3">Mein Tech-Stack</h2>
           <p class="fade-in text-stone-600 text-lg">
@@ -264,105 +572,178 @@
         </div>
       </div>
     </section>
-
-    <section id="projects" class="scroll-mt-24 pt-24 pb-24 bg-yellow-50/40 mt-32">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <div class="text-center mb-16">
-      <h2 class="fade-in md:text-5xl font-bold text-neutral-900 mb-3">Projekte</h2>
-      <p class="fade-in text-lg">Ausgewählte Arbeiten, die meine Schwerpunkte in Frontend- und Fullstack-Entwicklung zeigen.</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-10 items-start">
-
-      <!-- ========================== Lehrwerk App ========================== -->
-      <article class="bg-white/70 border border-yellow-100/60 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group fade-in">
-        <div class="relative overflow-hidden">
-          <img src="img/lehrwerk-preview.jpg" alt="Lehrwerk App Screenshot"
-               class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-
-        <div class="p-6">
-          <h3 class="text-2xl font-bold text-neutral-900 mb-2">Lehrwerk App</h3>
-          <p class="text-stone-700 leading-relaxed mb-4">
-            Eine Fullstack-Webanwendung für die Lehrwerk GmbH, entwickelt im Rahmen meines Abschlussprojekts.
-            Ziel war es, die interne Verwaltung von Kursen, Terminen und Kontaktanfragen zu digitalisieren.
-            <span id="more-lehrwerk" class="hidden opacity-0 transition-all duration-500 block mt-2">
-              Das System basiert auf <strong>Node.js</strong>, <strong>Express</strong> und <strong>MariaDB</strong> und stellt eine
-              <strong>REST-API</strong> bereit, über die Inhalte dynamisch gesteuert werden.  
-              Das Frontend wurde mit <strong>Vanilla JavaScript</strong> und <strong>Tailwind CSS</strong> umgesetzt und bietet ein integriertes
-              <strong>CMS-Interface</strong> für die Bearbeitung von JSON-basierten Inhalten.  
-              Eine Herausforderung bestand darin, die Datenstrukturen so flexibel zu gestalten, dass Seiteninhalte
-              ohne erneutes Deployment angepasst werden können.  
-              Die Anwendung wird produktiv bei der Lehrwerk GmbH eingesetzt.
-            </span>
-          </p>
-
-          <button onclick="openProject('lehrwerk')" class="text-yellow-700 font-semibold hover:text-yellow-800 transition">
-          Details ansehen
-          </button>
-
-        </div>
-      </article>
-
-      <!-- ========================== Portfolio ========================== -->
-      <article class="bg-white/70 border border-yellow-100/60 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group fade-in">
-        <div class="relative overflow-hidden">
-          <img src="img/portfolio.png" alt="Portfolio Screenshot"
-               class="w-full object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-
-        <div class="p-6">
-          <h3 class="text-2xl font-bold text-neutral-900 mb-2">Mein Portfolio</h3>
-          <p class="text-stone-700 leading-relaxed mb-4">
-            Diese Seite ist mein persönliches Entwicklerportfolio – konzipiert als moderne, minimalistische
-            Single-Page-Anwendung, die meine Projekte, Fähigkeiten und Erfahrungen präsentiert.
-            <span id="more-portfolio" class="hidden opacity-0 transition-all duration-500 block mt-2">
-              Entwickelt mit <strong>Vite</strong>, <strong>Tailwind CSS</strong> und <strong>Vanilla JavaScript</strong>.
-              Besonderes Augenmerk lag auf Performance, klarer Struktur und sanften
-              <strong>Scroll-Animationen (Intersection Observer)</strong>, die ein dynamisches SPA-Gefühl erzeugen.  
-              Das Portfolio ist komplett responsive, modular aufgebaut und lässt sich jederzeit
-              um weitere Projekte und Seiten erweitern.  
-              Neben der Gestaltung habe ich den Code so dokumentiert, dass er als Template
-              für zukünftige Seiten oder Kundenprojekte dienen kann.
-            </span>
-          </p>
-
-         <button
-         onclick="openProject('portfolio')" class="text-yellow-700 font-semibold hover:text-yellow-800 transition">
-        📄 Details ansehen
-        </button>
-
-          
-        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <!-- ========== Projekt-Detail Overlay ========== -->
-<div id="project-overlay"
-     class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden opacity-0 transition-opacity duration-500 z-50 flex justify-end">
-  
-  <!-- Slide-In Panel -->
-  <div id="project-detail"
-       class="bg-yellow-50 w-full sm:w-[600px] md:w-[700px] h-full shadow-2xl transform translate-x-full transition-transform duration-500 overflow-y-auto p-8">
-    
-    <!-- Close Button -->
-    <button id="close-project"
-            class="text-stone-600 hover:text-stone-900 text-2xl absolute top-4 right-6 font-bold">×</button>
-    
-    <div id="project-content" class="space-y-8 mt-8">
-      <!-- Dynamischer Inhalt kommt hier per JS rein -->
-    </div>
-  </div>
+</section>
+<!-- ================= PROJEKTE ================= -->
+<section id="projects" class="pt-32 pb-32 bg-yellow-50/40 mt-32">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Section Head -->
+<div class="text-center mb-32 max-w-4xl mx-auto fade-in">
+  <h2 class="text-4xl md:text-6xl font-bold text-neutral-900 mb-6">
+    PROJEKTE
+  </h2>
+  <p class="text-stone-600 text-lg leading-relaxed">
+    Ausgewählte Arbeiten aus meiner Ausbildung und Praxis.
+  </p>
 </div>
 
+
+    <!-- Projekt Hero -->
+    <div class="grid md:grid-cols-2 gap-20 items-center mb-32">
+
+      <!-- Text -->
+      <div class="fade-in">
+        <h2 class="text-4xl md:text-5xl font-semibold text-neutral-900 mb-8">
+          Abschlussprojekt<br>
+          <span class="text-2xl">Webanwendung für einen Bildungsträger</span>
+        </h2>
+
+        <p class="text-xl leading-relaxed text-stone-700 mb-8">
+          Entwicklung einer vollständigen Webanwendung mit öffentlichem Webauftritt
+          und internem Verwaltungsbereich. Das Projekt entstand im Rahmen meines
+          Abschlusses als Fachinformatiker für Anwendungsentwicklung.
+        </p>
+
+        <p class="text-xl leading-relaxed text-stone-700 mb-10">
+          Das Abschlussprojekt bildet meinen Einstieg in die praktische
+          Anwendungsentwicklung. Architektur und Aufbau sind bewusst so gestaltet,
+          dass darauf weitere Projekte und Erweiterungen aufbauen können.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="http://178.254.25.12/"  target="_blank" rel="no-referrer noopener"
+             class="px-7 py-4 rounded-xl bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition">
+            Live-Demo ansehen
+          </a>
+
+          <a href="#"
+             class="px-7 py-4 rounded-xl bg-white border border-neutral-300 font-semibold hover:bg-neutral-100 transition">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+
+      <!-- Titelbild -->
+      <div class="fade-in-right">
+        <div class="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-white">
+          <img
+            src="img/öffentlicherbereich.png"
+            alt="Öffentlicher Bereich der Webanwendung"
+            class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Beschreibung -->
+    <div class="max-w-4xl mx-auto text-center space-y-10 mb-32 fade-in">
+      <p class="text-lg leading-relaxed text-stone-700">
+        Die eigentliche Projektphase umfasste einen Zeitraum von zehn Wochen mit
+        einem geplanten Umfang von rund 80 Stunden. In dieser Zeit wurden Konzeption,
+        Umsetzung und Dokumentation erarbeitet.
+      </p>
+
+      <p class="text-lg leading-relaxed text-stone-700">
+        Ergänzend dazu habe ich ein sechsmonatiges Praktikum absolviert, in dem ich
+        mich intensiv mit Webentwicklung, Anwendungslogik und dem strukturierten
+        Aufbau von Systemen beschäftigt habe. Das Abschlussprojekt stellt den
+        technischen Kern dieser Praxisphase dar.
+      </p>
+    </div>
+
+    <!-- Fakten -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-36">
+      <div class="bg-white/80 rounded-2xl p-8 text-center fade-in-up shadow-xl">
+        <span class="text-sm text-stone-500">Projektart</span>
+        <p class="mt-3 text-xl font-semibold text-neutral-900">
+          IHK-Abschlussprojekt
+        </p>
+      </div>
+
+      <div class="bg-white/80 rounded-2xl p-8 text-center fade-in-up shadow-xl">
+        <span class="text-sm text-stone-500">Projektphase</span>
+        <p class="mt-3 text-xl font-semibold text-neutral-900">
+          10 Wochen ·  80 Stunden
+        </p>
+      </div>
+
+      <div class="bg-white/80 rounded-2xl p-8 text-center fade-in-up shadow-xl">
+        <span class="text-sm text-stone-500">Praxis</span>
+        <p class="mt-3 text-xl font-semibold text-neutral-900">
+          6 Monate Praktikum
+        </p>
+      </div>
+
+      <div class="bg-white/80 rounded-2xl p-8 text-center fade-in-up shadow-xl">
+        <span class="text-sm text-stone-500">Ausrichtung</span>
+        <p class="mt-3 text-xl font-semibold text-neutral-900">
+          Webentwicklung
+        </p>
+      </div>
+    </div>
+
+    <!-- CMS -->
+    <div class="mb-32">
+      <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center fade-in">
+        Interner Verwaltungsbereich (CMS)
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmslogin.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmscontact.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmscontent.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmspictures.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmsmaterial.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="h-full w-full rounded-xl overflow-hidden bg-white shadow-md fade-in-up border border-stone-400">
+          <img src="img/cmspassword.png" class="w-full h-full object-cover" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- Projekt Downloads -->
+<div class="mt-24 mb-24 flex flex-col md:flex-row justify-center gap-6 fade-in">
+
+  <a href="img/DokuFinalLehrwerkWebapp.pdf"
+     target="_blank"
+     class="px-8 py-4 rounded-xl bg-white border border-neutral-300
+            text-neutral-900 font-semibold
+            hover:bg-neutral-100 transition">
+    Projektdokumentation (PDF)
+  </a>
+
+</div>
+
+
+
+    <!-- Ausblick -->
+    <div class="max-w-4xl mx-auto text-center space-y-6 fade-in">
+      <p class="text-lg text-stone-700">
+        Dieses Projekt bildet den Ausgangspunkt meiner weiteren Arbeit in der
+        Anwendungsentwicklung.
+      </p>
+      <p class="text-lg text-stone-700">
+        Weitere Projekte und Erweiterungen befinden sich im Aufbau und werden
+        diese Projektübersicht künftig ergänzen.
+      </p>
+    </div>
+
+  </div>
 </section>
+
+
 
 <section id="contact" class="scroll-mt-24 pt-24 pb-24 bg-yellow-50/60 fade-in" data-delay="300ms">
   <div class="container mx-auto px-4 max-w-3xl text-center">
-    <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-      Kontakt
+    <h2 class="text-6xl md:text-6xl font-bold text-neutral-900 mb-6">
+      KONTAKT
     </h2>
     <p class="text-lg text-stone-600 mb-10">
       Schreib mir eine Nachricht – ich melde mich so schnell wie möglich zurück.
@@ -397,24 +778,45 @@
   </div>
 </section>
 
-
-    
-    
-
+  </body>
+</html>
 
     <footer class="bg-yellow-50 text-neutral-900 border border-neutral-300 text-sm py-4 mt-20">
-      <div class="container mx-auto px-4 flex flex-col md:flex-col justify-center items-center space-y-2 md:space-y-2 text-center">
-      <p>&copy; 2025 Tim Petersdorff</p>
-      <button id="open-impressum" class="hover:underline hover:text-yellow-100 transition">Impressum</button>
-      </div>
-    </footer>
+  <div class="container mx-auto px-4 flex flex-col md:flex-col justify-center items-center space-y-2 md:space-y-2 text-center">
+    <p>&copy; 2025 Tim Petersdorff</p>
+    <button id="open-impressum" class="hover:underline hover:text-yellow-600 transition">
+      Impressum
+    </button>
+  </div>
+</footer>
 
-    <div id="impressum-modal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300">
-      <div class="bg-yellow-50 text-gray-900 rounded-lg shadow-lg max-w-md w-full p-6 relative">
-      <button id="close-impressum" class="absolute top-2 right-3 text-gray-600 hover:text-black text-xl">&times;</button>
-      <h2 class="text-xl font-bold mb-4">Impressum</h2>
-      <p class="mb-2">Tim Petersdorff<br />An den Gärtnerhöfen 7<br />38120 Braunschweig</p>
-      <p>E-Mail: tim.petersdorff@icloud.com</p>
-      <p class="text-sm text-gray-600 mt-4">Verantwortlich gemäß § 55 Abs. 2 RStV:<br />Tim Petersdorff, Adresse wie oben</p>
-      </div>
-    </div>
+<!-- Modal -->
+<div id="impressum-modal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center 
+         z-[9999] opacity-0 pointer-events-none transition-all duration-300">
+
+  <div class="bg-yellow-50 text-gray-900 rounded-2xl shadow-2xl 
+              max-w-lg w-[90%] sm:w-[500px] p-6 relative transform scale-95 
+              transition-transform duration-300 ease-out">
+
+    <button id="close-impressum"
+      class="absolute top-3 right-4 text-gray-600 hover:text-black text-2xl leading-none">
+      &times;
+    </button>
+
+    <h2 class="text-2xl font-bold mb-4">Impressum</h2>
+
+    <p class="mb-2 leading-relaxed">
+      Tim Petersdorff<br>
+      An den Gärtnerhöfen 7<br>
+      38120 Braunschweig
+    </p>
+
+    <p class="mb-4">E-Mail: tim.petersdorff@icloud.com</p>
+
+    <p class="text-sm text-gray-600 border-t border-neutral-300 pt-3">
+      Verantwortlich gemäß § 55 Abs. 2 RStV:<br>
+      Tim Petersdorff, Adresse wie oben
+    </p>
+  </div>
+</div>

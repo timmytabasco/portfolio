@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const target = document.getElementById("typewriter");
   
   if (target) {
-    const text = "Angehender Fachinformatiker für Anwendungsentwicklung!";
+    const text = "Fachinformatiker für Anwendungsentwicklung";
     let index = 0;
 
     function type() {
@@ -220,39 +220,41 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 // Öffnen und Schließen des Impressums
 
 const openBtn = document.getElementById('open-impressum');
 const closeBtn = document.getElementById('close-impressum');
-const modal = document.getElementById('impressum-modal');
+const impressumModal = document.getElementById('impressum-modal');
 
-if (openBtn && closeBtn && modal) {
+if (openBtn && closeBtn && impressumModal) {
   openBtn.addEventListener('click', () => {
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-    modal.classList.add('opacity-100');
+    impressumModal.classList.remove('opacity-0', 'pointer-events-none');
+    impressumModal.classList.add('opacity-100');
     document.body.style.overflow = 'hidden';
   });
 
   closeBtn.addEventListener('click', () => {
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    modal.classList.remove('opacity-100');
+    impressumModal.classList.add('opacity-0', 'pointer-events-none');
+    impressumModal.classList.remove('opacity-100');x^x
     document.body.style.overflow = 'auto';
   });
 
   // Optional: Klick außerhalb schließt das Modal
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+  impressumModal.addEventListener('click', (e) => {
+    if (e.target === impressumModal) {
       closeBtn.click();
     }
   });
 
   // ESC-Taste schließt das Modal
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('opacity-100')) {
+    if (e.key === 'Escape' && impressumModal.classList.contains('opacity-100')) {
       closeBtn.click();
     }
   });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   // alle möglichen Fade-Typen
   const fadeElements = document.querySelectorAll(
@@ -322,7 +324,7 @@ const projects = {
   lehrwerk: {
     title: "Lehrwerk App",
     subtitle: "Fullstack-Webanwendung für Lehrwerk GmbH",
-    image: "img/lehrwerk-preview.jpg",
+    image: "img/lehrwerk.png",
     description: `
       <p>Die <strong>Lehrwerk-App</strong> digitalisiert die interne Verwaltung von Kursen, Terminen und Kontaktanfragen.</p>
       <p>Sie basiert auf <strong>Node.js</strong>, <strong>Express</strong> und <strong>MariaDB</strong> 
@@ -344,9 +346,9 @@ const projects = {
   },
 
   portfolio: {
-    title: "Portfolio Website",
+    title: "Mein Portfolio",
     subtitle: "Meine persönliche Entwicklerseite",
-    image: "img/portfolio-preview.jpg",
+    image: "img",
     description: `
       <p>Mein <strong>Portfolio</strong> präsentiert meine Projekte und Fähigkeiten in einem klaren, modernen Layout.</p>
       <p>Umgesetzt mit <strong>Vite</strong>, <strong>Tailwind CSS</strong> und <strong>Vanilla JS</strong> als leichte SPA.</p>
@@ -361,7 +363,7 @@ const projects = {
     tech: ["Vite", "Tailwind CSS", "JavaScript", "HTML5", "Git"],
     links: {
       live: "/",
-      github: "https://github.com/typet-dev/portfolio"
+      github: "https://github.com/timmytabasco/portfolio"
     }
   }
 };
@@ -471,4 +473,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
   });
 });
-
