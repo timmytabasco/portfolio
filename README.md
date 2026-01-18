@@ -1,185 +1,35 @@
-# 🌐 Portfolio – Tim Petersdorff
+# Portfolio – Tim Petersdorff
 
-This repository contains the source code for my **personal developer portfolio**, built to present my work as an **upcoming software developer (Fachinformatiker für Anwendungsentwicklung)**.  
-The portfolio is designed to be clean, structured, and minimal — highlighting both **technical precision** and **modern frontend aesthetics**.
+Hallo 👋  
+das hier ist mein persönliches Portfolio, das im Rahmen meiner Umschulung zum Fachinformatiker für Anwendungsentwicklung entstanden ist.
 
----
+Ich nutze dieses Projekt, um meine Arbeiten zu zeigen und einen Einblick in das zu geben, womit ich mich aktuell beschäftige. Das Portfolio ist bewusst übersichtlich gehalten und wird von mir Schritt für Schritt weiterentwickelt.
 
-## 🧠 About the Project
-This portfolio was developed to serve as both a **professional presentation website** and a **technical playground**.  
-It demonstrates my frontend and full-stack capabilities while keeping performance and simplicity in mind.
+Die Seite ist mit HTML, JavaScript und Tailwind CSS umgesetzt. Ziel war es, ein sauberes und modernes Layout zu bauen, ohne auf fertige Templates zurückzugreifen. Der Fokus lag darauf, die Grundlagen sauber umzusetzen und ein gutes Gefühl für Struktur, Styling und kleinere Interaktionen zu bekommen.
 
-The design follows a soft, balanced aesthetic using **Tailwind CSS** with custom fade-in animations and dynamic UI transitions.  
-Each section (Hero, About, Projects, Contact) was developed from scratch with a clear focus on **responsive layouts** and **modular code structure**.
+Während der Entwicklung habe ich viel mit Git gearbeitet und gelernt, wie man ein Projekt sinnvoll versioniert, aufräumt und dokumentiert. Auch der Umgang mit Build-Prozessen und Abhängigkeiten gehört für mich dazu.
 
----
+Das Portfolio wird auf einem eigenen Linux-VPS betrieben, den ich selbst eingerichtet habe. Dazu gehören unter anderem die Serverkonfiguration, die Absicherung des Systems sowie das Deployment der Anwendung. So habe ich nicht nur am Code gearbeitet, sondern auch verstanden, wie eine Anwendung später tatsächlich betrieben wird.
 
-## 🧩 Tech Stack
+Das Projekt ist nicht als „fertig“ zu sehen. Ich nutze es als Grundlage, um neue Dinge auszuprobieren, Inhalte zu ergänzen und meine Fortschritte sichtbar zu machen.
 
-| Category | Tools & Frameworks |
-|-----------|--------------------|
-| **Frontend** | HTML5, CSS3, JavaScript (ES Modules) |
-| **Styling** | Tailwind CSS 3.4, PostCSS, Autoprefixer |
-| **Build Tool** | Vite 7 |
-| **Version Control** | Git, GitHub |
-| **Hosting Environment** | Debian 12 VPS (self-hosted) |
-| **Development Tools** | VS Code, Node.js, npm |
-| **Design Concepts** | Clean UI, Component-based layout, Subtle animations |
-| **APIs / Integration** | Formspree (for contact form handling) |
+Wenn du Fragen hast oder dir etwas auffällt, melde dich gerne.
 
----
+___
 
-## ⚙️ Features
+# Portfolio – Tim Petersdorff
 
-### 🧭 Smooth Navigation
-- Responsive navigation bar with **active section highlighting** (desktop & mobile).
-- Scroll position tracking via **IntersectionObserver** to dynamically update the active menu state.
+Hi 👋  
+this is my personal portfolio, created during my retraining as an application developer.
 
-### ✨ Scroll Animations
-- Custom **fade-in-on-scroll** system using IntersectionObserver.
-- Supports multiple directions: up, down, left, right.
-- Optional delay via `data-delay` attribute for controlled sequence animations.
+I use this project to show my work and to give an overview of what I am currently learning and working on. The portfolio is kept simple on purpose and will be improved step by step over time.
 
-### 💡 Responsive & Accessible
-- Optimized for all screen sizes (mobile-first design).
-- Uses Tailwind utility classes for consistent spacing, color, and typography.
-- Semantic HTML structure for accessibility.
+The website is built with HTML, JavaScript and Tailwind CSS. My goal was to create a clean and modern layout without using ready-made templates. I focused on solid basics, clear structure and simple interactions.
 
-### 🪶 Minimal Dependencies
-- Purely frontend-based — no heavy libraries or frameworks.
-- No backend required for hosting.
-- Contact form powered by **Formspree**, keeping setup minimal and secure.
+While working on this project, I used Git regularly and learned how to manage a project, clean up commits and document my work properly. Build processes and dependencies are also part of my daily work with this project.
 
-### 💌 Contact Integration
-- Simple **contact form** with custom toast notification upon submission.
-- No backend dependency — all handled via Formspree API.
-- Toast appears for 5 seconds and then fades automatically.
+The portfolio is hosted on my own Linux VPS, which I set up myself. This includes server configuration, basic security and deploying the application. This helped me understand not only how to write code, but also how an application is actually run on a server.
 
----
+This project is not finished. I use it as a base to try new things, add content and track my progress over time.
 
-```
-## 🧱 Folder Structure
-
-portfolio/
-├── dist/                # Production build output (generated by Vite)
-├── img/                 # Images and assets used throughout the site
-├── node_modules/        # Dependencies (auto-generated)
-├── src/                 # Source files (development)
-│   ├── input.css        # Tailwind base and custom styles
-│   └── main.js          # Main JavaScript entry (animations, interactivity, fade logic)
-├── .gitignore           # Git ignore configuration
-├── index.html           # Root HTML entry file
-├── LICENSE              # Project license (MIT)
-├── package-lock.json    # Auto-generated dependency lock file
-├── package.json         # Project metadata and dependencies
-├── README.md            # Project documentation
-└── tailwind.config.js   # Tailwind configuration file
-```
-
-```
-🧠 Fade-in Animation Logic (Custom Script)
-The fade-in effect is powered by a simple but effective IntersectionObserver-based logic.
-Each element with the class .fade-in (or directional variants like .fade-in-left) smoothly animates into view when entering the viewport.
-
-
-js
-Code kopieren
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeElements = document.querySelectorAll(".fade-in, .fade-in-left, .fade-in-right, .fade-in-down");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("opacity-100", "translate-x-0", "translate-y-0");
-        entry.target.classList.remove("opacity-0", "translate-y-6", "-translate-y-6", "translate-x-6", "-translate-x-6");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  fadeElements.forEach((el, i) => {
-    el.classList.add("opacity-0", "transition-all", "duration-700", "ease-out");
-    if (el.classList.contains("fade-in-left")) el.classList.add("-translate-x-6");
-    else if (el.classList.contains("fade-in-right")) el.classList.add("translate-x-6");
-    else if (el.classList.contains("fade-in-down")) el.classList.add("-translate-y-6");
-    else el.classList.add("translate-y-6");
-
-    const customDelay = el.dataset.delay;
-    el.style.transitionDelay = customDelay || `${i * 150}ms`;
-
-    observer.observe(el);
-  });
-});
-```
-```
-🧭 Sections Overview
-
-🏠 Hero
-Animated introduction with a typewriter effect.
-
-Social icons (GitHub, LinkedIn, LeetCode) using Font Awesome.
-
-Clean call-to-action button for CV download.
-
-👨‍💻 About
-Split layout: portrait image left, animated text cards right.
-
-Cards highlight motivation, workflow, and mindset.
-
-Smooth fade-in transitions aligned with viewport entry.
-
-🧠 Tech Stack
-Interactive grid with hover animations for each technology.
-
-Uses color-coded Font Awesome icons with soft shadow glows.
-
-Includes all major tools I use daily: HTML, CSS, JS, Node.js, Express, Tailwind, MariaDB, Git, Vite, REST.
-
-💼 Projects
-Modular project cards with expandable “Read More” sections.
-
-Each project features: title, description, stack badges, and GitHub/live links.
-
-Designed to scale — future projects can be easily added.
-
-✉️ Contact
-Fully responsive form connected via Formspree.
-
-Custom toast feedback message after successful submission.
-
-Subtle fade-in animation and clean input field styling.
-```
-```
-🧰 Development Setup
-To run the project locally:
-
-# Clone repository
-git clone https://github.com/timmytabasco/portfolio.git
-
-# Navigate into the folder
-cd portfolio
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-For production build:
-
-npm run build
-```
-🧾 License
-This project is licensed under the MIT License.
-Feel free to explore, learn, or adapt parts of the code for your own portfolio.
-
-📫 Contact
-Email: tim.petersdorff.dev@gmail.com
-
-LinkedIn: linkedin.com/in/tim-petersdorff-114097340
-
-GitHub: github.com/timmytabasco
-
-✨ Final Note
-This portfolio is not just a showcase. It’s an evolving project that grows with my skills.
-I’m continuously refining both the codebase and design as I expand into full-stack and backend development.
-Future updates will include additional sections for projects, technical write-ups, and case studies.
+If you have any questions or feedback, feel free to reach out.
